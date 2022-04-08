@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+//This is 90% going to be deleted
+
 const SearchBar = ({keyword,setKeyword}) => {
     const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
     return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar";
+import AddNewSong from "./components/AddNewSong";
 import axios from "axios";
 import './components/styles.css'
 
@@ -17,9 +18,12 @@ function App() {
     console.log(response);
   }
 
+
+  //Don't forget to pass props into components in the future
   return (
     <div className="App">
-      <NavBar />
+      <NavBar  />
+      <AddNewSong  />
     </div>
   );
 }
