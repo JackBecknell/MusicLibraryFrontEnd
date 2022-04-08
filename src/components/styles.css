@@ -1,0 +1,20 @@
+.default_style{
+    width: 100%;
+    background-color: rgb(182, 182, 182);
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.nav_bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.nav_item{
+    margin: .25rem;
+}
+
