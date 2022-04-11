@@ -21,6 +21,7 @@ function EditModel (props) {
             likes: (props.song.likes)
         }
         editSong(editedEntry)
+        handleExit()
     }
 
     async function editSong(editedSong) {
@@ -33,35 +34,36 @@ function EditModel (props) {
     }
 
     return(
-        <div>
-            <button onClick={handleExit}>X</button>
-            <form onSubmit={handleSubmit}>    
-                <div>
-                    
+        <div className="modalBackground">
+            <div className="modalContainer">
+                <button onClick={handleExit}>X</button>
+                <form onSubmit={handleSubmit}>    
                     <h2 className="add-new-header">Edit Song</h2>
-                    <label>Song Name</label>
-                    <input type='text' value={songName} placeholder={props.song.title} onChange={(event)=>setSongName(event.target.value)}/>
-                </div>
-                <div>
-                    <label>Album</label>
-                    <input type='text' value={album} placeholder={props.song.album} onChange={(event)=>setAlbum(event.target.value)}/>
-                </div>
-                <div>
-                    <label>Artist Name</label>
-                    <input type='text' value={artist} placeholder={props.song.artist} onChange={(event)=>setArtist(event.target.value)}/>
-                </div>
-                <div>
-                    <label>Music Genre</label>
-                    <input type='text' value={genre} placeholder={props.song.genre} onChange={(event)=>setGenre(event.target.value)}/>
-                </div>
-                <div>
-                    <div>
-                        <label>Date</label>
-                        <input type='date' value={releaseDate} onChange={(event)=>setReleaseDate(event.target.value)}/>
+                    <div className="input-fields">
+                        <div>
+                            <label>Song Name</label>
+                            <input type='text' value={songName} placeholder={props.song.title} onChange={(event)=>setSongName(event.target.value)}/>
+                        </div>
+                        <div>
+                            <label>Album</label>
+                            <input type='text' value={album} placeholder={props.song.album} onChange={(event)=>setAlbum(event.target.value)}/>
+                        </div>
+                        <div>
+                            <label>Artist Name</label>
+                            <input type='text' value={artist} placeholder={props.song.artist} onChange={(event)=>setArtist(event.target.value)}/>
+                        </div>
+                        <div>
+                            <label>Music Genre</label>
+                            <input type='text' value={genre} placeholder={props.song.genre} onChange={(event)=>setGenre(event.target.value)}/>
+                        </div>
+                        <div>
+                            <label>Date</label>
+                            <input type='date' value={releaseDate} onChange={(event)=>setReleaseDate(event.target.value)}/>
+                        </div>
                     </div>
                     <button type='submit'>Submit</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     )
 }

@@ -5,18 +5,18 @@ import './styles.css'
 const DisplayMusic = (props) => {
 
     return (
-        <div>
+        <div className='table'>
             <table>
                 <thead>
                     <tr>
-                        <th>Likes</th>
+                        <th></th>
                         <th>Title</th>
                         <th>Artist</th>
                         <th>Album</th>
                         <th>Genre</th>
                         <th>Release Date</th>
                         <th></th>
-                        <th>Edit</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

@@ -37,7 +37,7 @@ const AddNewSong = (props) => {
 
     return (
         <div className="CreateNewSongBlock">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="add-new-song-form">
                 <div>
                     <h2 className="add-new-header">Add New Song</h2>
                     <label>Song Name</label>

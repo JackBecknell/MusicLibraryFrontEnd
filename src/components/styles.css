@@ -21,10 +21,58 @@
 .CreateNewSongBlock{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: right;
+}
+
+.add-new-song-form{
+    margin: 1rem;
+    display: grid;
+    justify-items: right;
+    align-items: flex-end;
+    background-color: rgb(179, 179, 179);
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 1px;
 }
 
 .add-new-header{
     justify-self: center;
     align-self: center;
+}
+
+.modalBackground{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(191, 255, 252, 0.856);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer{
+    background-color: rgb(238, 238, 238);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: .5rem .5rem .5rem .1rem rgba(0, 0, 0, 0.086);
+    display: flex;
+    flex-direction: column;
+    padding: 20px
+}
+
+.input-fields{
+    display: grid;
+    justify-items: right;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
