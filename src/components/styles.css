@@ -18,3 +18,13 @@
     margin: .25rem;
 }
 
+.CreateNewSongBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-new-header{
+    justify-self: center;
+    align-self: center;
+}

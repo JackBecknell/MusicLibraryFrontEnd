@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import './styles.css'
 
 const AddNewSong = (props) => {
@@ -20,15 +21,20 @@ const AddNewSong = (props) => {
             genre: genre,
             likes: 0
         };
-        //Use 'props.(function at higher level to add song to database)(newEntry)
-        console.log(`You added: ${newEntry} to your db.`)
+        //This will add the song localy
+        //props.addFunction(newEntry)
+        postNewSong(newEntry)
     }
     
+    async function postNewSong(song) {
+        let response = await axios.post('http://127.0.0.1:8000/music/', song)
+    }
+
     return (
-        <div>
+        <div className="CreateNewSongBlock">
             <form onSubmit={handleSubmit}>
                 <div>
-                    <h2>Add New Song</h2>
+                    <h2 className="add-new-header">Add New Song</h2>
                     <label>Song Name</label>
                     <input type='text' value={songName} onChange={(event)=>setSongName(event.target.value)}/>
                 </div>
