@@ -1,5 +1,6 @@
 import DeleteButton from './DeleteButton'
 import EditButton from './EditButton'
+import LikeButton from './LikButton'
 import './styles.css'
 
 const DisplayMusic = (props) => {
@@ -23,7 +24,7 @@ const DisplayMusic = (props) => {
                     {props.currentSongs.slice(0).reverse().map((song, index) => {
                         return(
                             <tr key={index+1}>
-                                <td>Like Button</td>
+                                <td><LikeButton pk={song.id} likes={song.likes}/></td>
                                 <td>{song.title}</td>
                                 <td>{song.artist}</td>
                                 <td>{song.album}</td>
