@@ -33,6 +33,8 @@ const AddNewSong = (props) => {
         await axios.post('http://127.0.0.1:8000/music/', song)
     }
 
+    
+
     return (
         <div className="CreateNewSongBlock">
             <form onSubmit={handleSubmit}>
