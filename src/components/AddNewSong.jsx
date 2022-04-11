@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import './styles.css'
 
@@ -21,9 +21,12 @@ const AddNewSong = (props) => {
             genre: genre,
             likes: 0
         };
-        //This will add the song localy
-        //props.addFunction(newEntry)
         postNewSong(newEntry)
+        setSongName('')
+        setAlbum('')
+        setArtist('')
+        setGenre('')
+        setReleaseDate('')
     }
     
     async function postNewSong(song) {
