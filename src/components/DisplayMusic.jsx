@@ -1,3 +1,4 @@
+import DeleteButton from './DeleteButton'
 import './styles.css'
 
 const DisplayMusic = (props) => {
@@ -27,7 +28,7 @@ const DisplayMusic = (props) => {
                                 <td>{song.album}</td>
                                 <td>{song.genre}</td>
                                 <td>{song.release_date}</td>
-                                <td>Delete Button</td>
+                                <td><DeleteButton song = {song.id}/></td>
                                 <td>Edit Button</td>
                             </tr>
                         )

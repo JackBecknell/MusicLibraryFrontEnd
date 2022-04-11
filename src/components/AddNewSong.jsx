@@ -30,7 +30,7 @@ const AddNewSong = (props) => {
     }
     
     async function postNewSong(song) {
-        let response = await axios.post('http://127.0.0.1:8000/music/', song)
+        await axios.post('http://127.0.0.1:8000/music/', song)
     }
 
     return (
