@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState , useEffect } from "react";
-import './styles.css'
+import '../styles.css'
 
 const LikeButton = (props) => {
     

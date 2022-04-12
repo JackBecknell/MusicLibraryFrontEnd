@@ -1,38 +1,40 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import AddNewSong from "./components/AddNewSong";
-import DisplayMusic from "./components/DisplayMusic";
+import DisplayMusic from "./components/display_music/DisplayMusic";
+import FilterSongs from "./components/display_music/FilterSongs"
 import axios from "axios";
-import './components/styles.css'
+import "./components/styles.css";
 
 function App() {
   const [songs, setSongs] = useState([]);
+  const [requestReload, setRequestReload] = useState(true);
 
-  //This use effect runs only once storing all songs currently in the database into the useState variable songs.
-  useEffect (()=>{
-    getAllSongs()
-  },[])
-
-  useEffect (()=>{
-    getAllSongs()
-  },[songs])
+  useEffect(() => {
+    if (requestReload) {
+      getAllSongs();
+      setRequestReload(false);
+    }
+  }, [requestReload]);
+ 
   //This async function allows our front end to communicate with our backend to performa get call for all music.
   async function getAllSongs() {
     let response = await axios.get("http://127.0.0.1:8000/music/");
     setSongs(response.data);
   }
-
-  function addNewSong (song) {
-    let tempSong = [...songs, song]
-    setSongs(tempSong)
+  //This function allows a user to pass a song object in to AddNewSong via param to be added to the database
+  function addNewSong(song) {
+    let tempSong = [...songs, song];
+    setSongs(tempSong);
   }
 
-  //Don't forget to pass props into components in the future
+  
   return (
     <div className="App">
-      <NavBar  />
-      <AddNewSong  addFunction = {addNewSong}/>
-      <DisplayMusic currentSongs = {songs}/>
+      <NavBar />
+      <AddNewSong addFunction={addNewSong} reload={setRequestReload}/>
+      <FilterSongs songs={songs} resetDisplay={getAllSongs} setDisplay={setSongs} />
+      <DisplayMusic currentSongs={songs} reload={setRequestReload}/>
     </div>
   );
 }

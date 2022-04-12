@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import './styles.css'
+import '../../styles.css'
 
 function EditModel (props) {
 
@@ -22,6 +22,7 @@ function EditModel (props) {
         }
         editSong(editedEntry)
         handleExit()
+        props.reload(true)
     }
 
     async function editSong(editedSong) {

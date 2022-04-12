@@ -1,9 +1,13 @@
+import { useState } from "react";
 import DeleteButton from './DeleteButton'
-import EditButton from './EditButton'
+import EditButton from "./edit_button/EditButton";
 import LikeButton from './LikButton'
-import './styles.css'
+import '../styles.css'
 
 const DisplayMusic = (props) => {
+
+    const[data, setData] = useState([])
+    const[query, setQuery] = useState('')
 
     return (
         <div className='table'>
@@ -30,8 +34,8 @@ const DisplayMusic = (props) => {
                                 <td>{song.album}</td>
                                 <td>{song.genre}</td>
                                 <td>{song.release_date}</td>
-                                <td><DeleteButton song = {song.id}/></td>
-                                <td><EditButton song = {song}/></td>
+                                <td><DeleteButton song = {song.id} reload={props.reload}/></td>
+                                <td><EditButton song = {song} reload={props.reload}/></td>
                             </tr>
                         )
                     })}

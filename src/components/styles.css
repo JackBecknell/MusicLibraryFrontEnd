@@ -84,3 +84,67 @@
 .disliked{
     background-color: rgb(184, 184, 184);
 }
+
+
+
+.filter-and-modal{
+    display: flex;
+
+}
+
+.reset-btn{
+    background-color: #0258a8;
+    color: white;
+    width: 6rem;
+    height: 2.75rem; 
+    padding: auto;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-btn:hover{
+    background-color: #013d75;
+}
+
+/*Styles for dropdown for filter*/
+.dropbtn {
+    background-color: #007bee;
+    color: white;
+    width: 6rem;
+    height: 2.75rem; 
+    padding: auto;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: fit-content;
+    width: 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content button {
+    width: 6rem;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content button:hover {
+    background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #304ef8;
+}
+/*End of Styles for dropdown for filter*/

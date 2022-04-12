@@ -1,5 +1,5 @@
 import axios from "axios";
-import './styles.css'
+import '../styles.css'
 
 const DeleteButton = (props) => {
     
@@ -9,6 +9,7 @@ const DeleteButton = (props) => {
         event.preventDefault();
         let num = props.song
         deleteSong(num)
+        props.reload(true)
 }
     //This function takes a pk from handleSubmit and then sends a delete request
     //to the data base for that song.
