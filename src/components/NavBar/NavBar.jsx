@@ -22,12 +22,6 @@ const NavBar = (props) => {
     return (
         <nav className='nav_bar default_style'>
             
-            <div className='nav_item'>
-                <form onSubmit={handleSubmit} className='nav_item'>
-                    <input type='text' value={searchParameter} onChange={(event)=>setSearchParameter(event.target.value)}/> 
-                    <button type='submit'>Search</button>
-                </form>
-            </div>
             <a href="#" className='nav_item'><b>Music</b>Library</a>
             
         </nav>
