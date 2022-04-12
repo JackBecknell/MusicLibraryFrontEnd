@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar";
 import AddNewSong from "./components/AddNewSong";
 import DisplayMusic from "./components/display_music/DisplayMusic";
 import FilterSongs from "./components/display_music/FilterSongs"

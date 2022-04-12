@@ -1,6 +1,5 @@
-import SearchBar from "./SearchBar"
 import React, { useState, useEffect } from "react";
-import '../styles.css'
+import './styles.css'
 
 
 const NavBar = (props) => {
@@ -21,9 +20,7 @@ const NavBar = (props) => {
 
     return (
         <nav className='nav_bar default_style'>
-            
             <a href="#" className='nav_item'><b>Music</b>Library</a>
-            
         </nav>
     )
 }
