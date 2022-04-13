@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState , useEffect } from "react";
+import { useState } from "react";
 import '../styles.css'
 
 const LikeButton = (props) => {
@@ -7,7 +7,7 @@ const LikeButton = (props) => {
     const [buttonStyle, setButtonStyle] = useState('disliked')
 
     function handleSubmit () {
-        if (buttonStyle == 'disliked'){
+        if (buttonStyle === 'disliked'){
             setButtonStyle('liked')
             likeSong(props.pk)
             setTimeout(() => {props.reload(true)}, 200)

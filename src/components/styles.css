@@ -9,7 +9,6 @@
 
 .page-background{
     background-image: url(./media/piano.jpg);
-    background-blend-mode:hard-light;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

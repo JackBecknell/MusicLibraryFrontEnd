@@ -1,13 +1,9 @@
-import { useState } from "react";
 import DeleteButton from './DeleteButton'
 import EditButton from "./edit_button/EditButton";
 import LikeButton from './LikButton'
 import '../styles.css'
 
 const DisplayMusic = (props) => {
-
-    const[data, setData] = useState([])
-    const[query, setQuery] = useState('')
 
     return (
         <div className='table'>
