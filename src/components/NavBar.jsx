@@ -19,7 +19,7 @@ const NavBar = (props) => {
     }
 
     return (
-        <nav className='nav_bar default_style'>
+        <nav className='nav_bar'>
             <a href="#" className='nav_item'><b>Music</b>Library</a>
         </nav>
     )

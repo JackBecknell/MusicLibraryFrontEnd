@@ -9,7 +9,7 @@ const DeleteButton = (props) => {
         event.preventDefault();
         let num = props.song
         deleteSong(num)
-        props.reload(true)
+        setTimeout(() => {props.reload(true)}, 100)
 }
     //This function takes a pk from handleSubmit and then sends a delete request
     //to the data base for that song.

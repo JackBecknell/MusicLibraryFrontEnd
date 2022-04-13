@@ -27,7 +27,7 @@ const AddNewSong = (props) => {
         setArtist('')
         setGenre('')
         setReleaseDate('')
-        props.reload(true)
+        setTimeout(() => {props.reload(true)}, 100)
     }
     
     async function postNewSong(song) {

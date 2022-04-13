@@ -30,7 +30,7 @@ function App() {
 
   
   return (
-    <div className="App">
+    <div className="App non-existant">
       <NavBar />
       <AddNewSong addFunction={addNewSong} reload={setRequestReload}/>
       <FilterSongs songs={songs} resetDisplay={getAllSongs} setDisplay={setSongs} />

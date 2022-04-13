@@ -22,7 +22,7 @@ function EditModel (props) {
         }
         editSong(editedEntry)
         handleExit()
-        props.reload(true)
+        setTimeout(() => {props.reload(true)}, 100)
     }
 
     async function editSong(editedSong) {
