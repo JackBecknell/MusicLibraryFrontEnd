@@ -15,11 +15,11 @@ const DisplayMusic = (props) => {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Title</th>
-                        <th>Artist</th>
-                        <th>Album</th>
-                        <th>Genre</th>
-                        <th>Release Date</th>
+                        <th className="actual-table-head">Title</th>
+                        <th className="actual-table-head">Artist</th>
+                        <th className="actual-table-head">Album</th>
+                        <th className="actual-table-head">Genre</th>
+                        <th className="actual-table-head">Release Date</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -28,7 +28,7 @@ const DisplayMusic = (props) => {
                     {props.currentSongs.slice(0).reverse().map((song, index) => {
                         return(
                             <tr key={index+1}>
-                                <td><LikeButton pk={song.id} likes={song.likes}/></td>
+                                <td><LikeButton pk={song.id} likes={song.likes} reload={props.reload}/></td>
                                 <td className="actual-table">{song.title}</td>
                                 <td className="actual-table">{song.artist}</td>
                                 <td className="actual-table">{song.album}</td>

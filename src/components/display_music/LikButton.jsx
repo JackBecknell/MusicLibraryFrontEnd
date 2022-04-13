@@ -4,16 +4,13 @@ import '../styles.css'
 
 const LikeButton = (props) => {
     
-    const [likeStatus, setLikeStatus] = useState(false)
     const [buttonStyle, setButtonStyle] = useState('disliked')
 
     function handleSubmit () {
-        if (buttonStyle == 'disliked' && likeStatus == false){
-            setLikeStatus(true)
+        if (buttonStyle == 'disliked'){
             setButtonStyle('liked')
             likeSong(props.pk)
-        }else{
-            console.log("need to fix like button")
+            setTimeout(() => {props.reload(true)}, 200)
         }
     }
 
@@ -22,9 +19,7 @@ const LikeButton = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <button type='submit' className={buttonStyle}><p>LIKE {props.likes}</p></button>
-        </form>
+            <button className={buttonStyle} onClick={handleSubmit}><p>LIKE {props.likes}</p></button>
     )
 }
 export default LikeButton;
