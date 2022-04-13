@@ -32,9 +32,12 @@ function App() {
   return (
     <div className="App non-existant">
       <NavBar />
-      <AddNewSong addFunction={addNewSong} reload={setRequestReload}/>
-      <FilterSongs songs={songs} resetDisplay={getAllSongs} setDisplay={setSongs} />
-      <DisplayMusic currentSongs={songs} reload={setRequestReload}/>
+      <div className="page-background">
+        <AddNewSong addFunction={addNewSong} reload={setRequestReload}/>
+        <FilterSongs songs={songs} resetDisplay={getAllSongs} setDisplay={setSongs} />
+        <DisplayMusic currentSongs={songs} reload={setRequestReload}/>
+        <div className="footer"></div>
+      </div>
     </div>
   );
 }

@@ -29,11 +29,11 @@ const DisplayMusic = (props) => {
                         return(
                             <tr key={index+1}>
                                 <td><LikeButton pk={song.id} likes={song.likes}/></td>
-                                <td>{song.title}</td>
-                                <td>{song.artist}</td>
-                                <td>{song.album}</td>
-                                <td>{song.genre}</td>
-                                <td>{song.release_date}</td>
+                                <td className="actual-table">{song.title}</td>
+                                <td className="actual-table">{song.artist}</td>
+                                <td className="actual-table">{song.album}</td>
+                                <td className="actual-table">{song.genre}</td>
+                                <td className="actual-table">{song.release_date}</td>
                                 <td><DeleteButton song = {song.id} reload={props.reload}/></td>
                                 <td><EditButton song = {song} reload={props.reload}/></td>
                             </tr>
@@ -41,6 +41,7 @@ const DisplayMusic = (props) => {
                     })}
                 </tbody>
             </table>
+            
         </div>
     )
 }

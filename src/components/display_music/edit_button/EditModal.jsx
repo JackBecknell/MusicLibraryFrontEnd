@@ -37,7 +37,7 @@ function EditModel (props) {
     return(
         <div className="modalBackground">
             <div className="modalContainer">
-                <button onClick={handleExit}>X</button>
+                <button onClick={handleExit} className="cancelBtn">CANCEL</button>
                 <form onSubmit={handleSubmit}>    
                     <h2 className="add-new-header">Edit Song</h2>
                     <div className="input-fields">
@@ -62,7 +62,7 @@ function EditModel (props) {
                             <input type='date' value={releaseDate} onChange={(event)=>setReleaseDate(event.target.value)}/>
                         </div>
                     </div>
-                    <button type='submit'>Submit</button>
+                    <button type='submit' className="submitBtn">SUBMIT</button>
                 </form>
             </div>
         </div>

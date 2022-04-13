@@ -3,12 +3,27 @@
     margin: 0%;
 }
 
+.background-clear{
+    background-color: transparent;
+}
+
+.page-background{
+    background-image: url(./media/piano.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .default_style{
     width: 100%;
     background-color: rgb(182, 182, 182);
     border-style: solid;
     border-width: 1px;
     border-color: black;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 .nav_bar{
@@ -18,14 +33,16 @@
     align-items: center;
     height: 5rem;
     width: 100vw;
-    background-color: rgb(0, 241, 241);
+    margin: 0%;
+    background-color: #0157a7;
     border-style: solid;
     border-width: 1px;
     border-color: black;
 }
 
 .nav_item{
-    margin: .25rem;
+    color: white;
+    font-size: x-large;
 }
 
 .CreateNewSongBlock{
@@ -34,27 +51,64 @@
     align-items: right;
 }
 
+th{
+    color: rgb(162, 0, 202);
+    text-shadow: #f9f9f9;
+    letter-spacing: .1rem;
+    font-size: 22px;
+    max-width: 9rem;
+    min-width: 7rem;
+}
+
+td{
+    color: white;
+    text-align: center;
+}
+
+.actual-table{
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.footer{
+    width: 100%;
+    height: 4rem;
+    margin-top: 6rem;
+    background-color: #620175;
+}
+
 .add-new-song-form{
     margin: 1rem;
-    display: grid;
+    padding: .5rem;
+    width: 20rem;
+    height: auto;
+    display: flex;
     justify-items: right;
-    align-items: flex-end;
-    background-color: rgb(179, 179, 179);
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(82, 85, 247, 0.651);
+    color: white;
     border-style: solid;
     border-color: black;
     border-radius: 10px;
     border-width: 1px;
 }
 
+.add-new-song-form label{
+    color: rgb(133, 245, 245);
+    display: flex;
+    justify-content: center;
+}
+
 .add-new-header{
-    justify-self: center;
+    display: flex;
+    justify-content: center;
     align-self: center;
 }
 
 .modalBackground{
     width: 100%;
     height: 100vh;
-    background-color: rgba(191, 255, 252, 0.856);
+    background-color: rgba(26, 2, 31, 0.753);
     top: 0;
     bottom: 0;
     left: 0;
@@ -66,7 +120,7 @@
 }
 
 .modalContainer{
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(0, 98, 209);
     width: fit-content;
     height: fit-content;
     border-radius: 10px;
@@ -74,6 +128,29 @@
     display: flex;
     flex-direction: column;
     padding: 20px
+}
+.submitBtn{
+    border: transparent;
+    border-radius: 3px;
+    background-color: rgba(47, 255, 134, 0.616);
+    width: 100%;
+    margin: .1rem;
+}
+
+.submitBtn:hover{
+    background-color: rgb(46, 255, 133);
+}
+
+.cancelBtn{
+    border: transparent;
+    border-radius: 3px;
+    background-color: rgba(255, 89, 47, 0.616);
+    width: 100%;
+    margin: .1rem;
+}
+
+.cancelBtn:hover{
+    background-color: rgb(204, 62, 26);
 }
 
 .input-fields{
